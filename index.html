@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 페이지</title>
+    <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+    <header class="admin-header">
+        <h1>관리자 페이지</h1>
+        <nav>
+            <ul class="admin-nav">
+                <li><a href="#products">제품 관리</a></li>
+                <li><a href="#events">행사 관리</a></li>
+                <li><a href="#reservations">예약 관리</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="products" class="admin-section">
+            <h2>제품 관리</h2>
+            <form id="product-form">
+                <label for="product-name">제품명:</label>
+                <input type="text" id="product-name" required>
+                <label for="product-price">가격:</label>
+                <input type="number" id="product-price" required>
+                <label for="product-image">이미지 URL:</label>
+                <input type="text" id="product-image" required>
+                <button type="submit" class="admin-btn">제품 추가</button>
+            </form>
+            <div id="product-list" class="admin-list">
+                <!-- 제품 목록이 표시됩니다 -->
+            </div>
+        </section>
+
+        <section id="events" class="admin-section">
+            <h2>행사 관리</h2>
+            <form id="event-form">
+                <label for="event-title">행사명:</label>
+                <input type="text" id="event-title" required>
+                <label for="event-desc">설명:</label>
+                <input type="text" id="event-desc" required>
+                <button type="submit" class="admin-btn">행사 추가</button>
+            </form>
+            <div id="event-list" class="admin-list">
+                <!-- 행사 목록이 표시됩니다 -->
+            </div>
+        </section>
+
+        <section id="reservations" class="admin-section">
+            <h2>예약 관리</h2>
+            <div id="reservation-list" class="admin-list">
+                <!-- 예약 목록이 표시됩니다 -->
+            </div>
+        </section>
+    </main>
+
+    <script src="admin-script.js"></script>
+</body>
+</html>
